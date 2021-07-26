@@ -21,6 +21,6 @@ class TetraRestDemoApplicationTests {
 	@Test
 	public void testGetAllTopics() {
 		List<Topic> topics = topicService.getAllTopics();
-		assertEquals(2, topics.size());
+		assertEquals(4, topics.size());
 	}
 }
