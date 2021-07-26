@@ -29,7 +29,9 @@ public class TopicService {
 	}
 	public void updateTopic(Topic topic) {
 		topicRepository.save(topic);
-	}public void deleteTopicById(Long id) {
+	}
+	
+	public void deleteTopicById(Long id) {
 		topicRepository.deleteById(id);
 	}
 

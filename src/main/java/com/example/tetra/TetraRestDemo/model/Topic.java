@@ -15,8 +15,8 @@ import lombok.Data;
 public class Topic {
 	
 	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID")
+    @GeneratedValue
+    @Column(updatable = false, nullable = false)
 	private Long id;
 	private String name;
 	private String description;

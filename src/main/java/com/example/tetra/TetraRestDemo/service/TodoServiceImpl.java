@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.example.tetra.TetraRestDemo.exception.RecordNotFoundException;
 import com.example.tetra.TetraRestDemo.model.Todo;
 import com.example.tetra.TetraRestDemo.repo.TodoRepository;
 
@@ -27,8 +28,9 @@ public class TodoServiceImpl implements TodoService {
     }
 
     @Override
-    public Todo getTodoById(Long id) {
-        return todoRepository.findById(id).get();
+    public Todo getTodoById(Long id) throws RecordNotFoundException {
+        return todoRepository.findById(id)  //.get()
+        		.orElseThrow(() -> new RecordNotFoundException(String.format("Todo with id '%id' not found.", id)));
     }
 
     @Override
