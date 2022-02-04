@@ -18,9 +18,10 @@ class TetraRestDemoApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-	@Test
-	public void testGetAllTopics() {
-		List<Topic> topics = topicService.getAllTopics();
-		assertEquals(4, topics.size());
-	}
+//	@Test
+//	public void testGetAllTopics() {
+//		List<Topic> topics = topicService.getAllTopics();
+//		assertEquals(4, topics.size());
+//	}
+//
 }
