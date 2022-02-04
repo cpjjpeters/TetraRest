@@ -16,6 +16,7 @@ public class AuditService {
         this.auditRepository = auditRepository;
     }
     public List<Audit> findAllAudits(){
+        log.debug("this is added in tersc2");
         return this.auditRepository.findAll();
     }
 }
